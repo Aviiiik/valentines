@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Warm vintage paper background */
+  --background: #fdf6e3; 
+  /* Deep Navy for that 90s denim feel */
+  --foreground: #1a365d;
+  /* Romantic Red accent */
+  --accent: #dc2626;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: var(--accent);
+  
+  /* Link the fonts from your layout.tsx variables */
+  --font-sans: var(--font-inter);
+  --font-handwriting: var(--font-handwriting);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Remove the (prefers-color-scheme: dark) block to keep the aesthetic consistent */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optional: Custom utility for that "scrawled" look */
+.handwritten {
+  font-family: var(--font-handwriting);
 }
