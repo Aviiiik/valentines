@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "10 Things I Hate About You...",
   description: "But mostly, I hate the way I don't hate you. Not even a little bit.",
   openGraph: {
-    title: "A Message for You",
+    title: "A Message for mi amor",
     description: "Click to open your Valentine's note.",
     images: [{ url: '/images/bg1.jfif' }], // Shows the swing image when you text the link
   },
